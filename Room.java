@@ -1,24 +1,31 @@
 public class Room {
 
-    public static int numberInRoom = 10;
-    
+    private static int totalNumber = 0;
+    public int numberInRoom = 0;
 
-    public int addOne(){
+
+    public int addOneToRoom(){
         numberInRoom++;
+        totalNumber++;
         return numberInRoom;
     }
-    public int removeOne(){
-        if (numberInRoom == 0){
+    public int removeOneFromRoom(){
+        if (numberInRoom == 0 || totalNumber ==0){
             return numberInRoom;
         }
         numberInRoom--;
+        totalNumber--;
         return numberInRoom;
     }
-    public static void main(String[] args) {
 
-        //System.out.println(roomOne.addOne(2));
-        //System.out.println(roomOne.addOne(3));
-        //System.out.println(roomOne.removeOne(3));
+    public int getNumber(){
+
+        return numberInRoom;
+    }
+
+    public static int getTotal(){
+
+        return totalNumber;
     }
 
 }
