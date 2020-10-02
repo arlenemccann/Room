@@ -30,9 +30,8 @@ public class RoomDriver {
         System.out.println("Total people in Room Two: " + (roomTwo.numberInRoom));
         System.out.println("Total people in Room Three: " + (roomThree.numberInRoom));
 
-        this.totalNumber = roomOne.numberInRoom + roomTwo.numberInRoom + roomThree.numberInRoom;
-
-        System.out.println("There are " + this.totalNumber + " people in the building!" );
+       
+        System.out.println("There are " + Room.getTotal() + " people in the building!" );
 
     }
 }
